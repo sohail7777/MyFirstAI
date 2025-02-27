@@ -1,6 +1,12 @@
 import boto3
 import json
+import streamlit as st
 
+import os
+import shelve
+
+USER_AVATAR = ""
+BOT_AVATAR = "BOT"
 
 bedrock_runtime = boto3.client('bedrock-runtime', region_name='us-west-2')
 
@@ -29,4 +35,5 @@ response_body = json.loads(response.get('body').read())
 
 print(response_body['results'][0]['outputText'])
 
-#PATH="/Library/Frameworks/Python.framework/Versions/3.13/bin:${PATH}"
+
+
