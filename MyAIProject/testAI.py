@@ -4,7 +4,7 @@ import json
 
 bedrock_runtime = boto3.client('bedrock-runtime', region_name='us-west-2')
 
-prompt = "hello"
+prompt = "hello what city is london in?"
 
 
 
@@ -29,3 +29,4 @@ response_body = json.loads(response.get('body').read())
 
 print(response_body['results'][0]['outputText'])
 
+#PATH="/Library/Frameworks/Python.framework/Versions/3.13/bin:${PATH}"
