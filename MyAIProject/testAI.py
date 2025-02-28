@@ -1,12 +1,7 @@
 import boto3
 import json
-import streamlit as st
 
-import os
-import shelve
 
-USER_AVATAR = ""
-BOT_AVATAR = "BOT"
 
 bedrock_runtime = boto3.client('bedrock-runtime', region_name='us-west-2')
 
